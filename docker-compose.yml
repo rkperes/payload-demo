@@ -16,15 +16,15 @@ services:
       - .env
 
   mongo:
-    image: mongo:latest
+    image: mongo:7.0.5
     ports:
       - '27017:27017'
     command:
       - --storageEngine=wiredTiger
     volumes:
       - data:/data/db
-    logging:
-      driver: none
+    # logging:
+    #   driver: none
 
 volumes:
   data:
